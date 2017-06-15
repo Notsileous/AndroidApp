@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="omg.androidbook.frammisoft.myapplication.MainActivity"
+    android:weightSum="1">
+<ImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/img_cover"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:layout_margin="25dp"
+    android:src="@drawable/img_books_large_no_cover"
+    android:contentDescription="book image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/details_buy"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/imageButton2"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton2"
+        android:src="@drawable/barnes_logo"
+        android:maxWidth="100dp"
+        android:minHeight="100dp"
+        android:scaleType="fitXY"
+        android:onClick="onBarnesClick"
+        android:layout_gravity="right"
+        android:clickable="true"
+        android:baselineAlignBottom="true"
+        android:layout_alignTop="@+id/imageButton"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton"
+        android:src="@drawable/amazon_logo"
+        android:maxWidth="100dp"
+        android:minHeight="100dp"
+        android:scaleType="fitXY"
+        android:onClick="onAmazonClick"
+        android:layout_gravity="left"
+        android:baselineAlignBottom="true"
+        android:clickable="true"
+        android:layout_below="@+id/img_cover"
+        android:layout_alignLeft="@+id/img_cover"
+        android:layout_alignStart="@+id/img_cover" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton3"
+        android:src="@drawable/bam_logo"
+        android:maxWidth="100dp"
+        android:minHeight="100dp"
+        android:scaleType="fitXY"
+        android:onClick="onBAMClick"
+        android:layout_gravity="left"
+        android:baselineAlignBottom="true"
+        android:clickable="true"
+        android:layout_alignTop="@+id/imageButton2"
+        android:layout_alignRight="@+id/img_cover"
+        android:layout_alignEnd="@+id/img_cover" />
+
+</RelativeLayout>
